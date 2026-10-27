@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>▷ SEOsystème — Agence de marketing digital</title>
+<link rel="canonical" href="https://seosysteme.com">
+<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+<meta name="description" content="Services de marketing digital depuis 2008 - Capter et convertir des visiteurs via : Google, Bing, GoogleMaps, Publicité, Réseaux sociaux "/>
+<style>
+    /* Inter */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/inter-v20-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/inter-v20-latin-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/inter-v20-latin-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/inter-v20-latin-700.woff2') format('woff2');
+}
+
+/* Fraunces */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/fraunces-v38-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/fraunces-v38-latin-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/fraunces-v38-latin-600.woff2') format('woff2');
+}
+
+  :root{
+    --cream:#FAFAF7;
+    --ink:#1B2430;
+    --teal:#2F5D5A;
+    --teal-dark:#20423F;
+    --coral:#E8724C;
+    --coral-dark:#C55A38;
+    --stone:#6B7280;
+    --line:#E4E1D6;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    color:var(--ink);
+    line-height:1.15;
+    font-feature-settings:"liga" 1,"kern" 1;
+  }
+  a{color:inherit;text-decoration:none;}
+  a:focus-visible,
+  .pastille:focus-within{
+    outline:3px solid var(--coral);
+    outline-offset:3px;
+    border-radius:6px;
+  }
+  .pastille:focus-within{border-radius:999px;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+  @media (max-width:600px){.wrap{padding:0 20px;}}
+
+  /* HEADER */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,250,247,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 10px;
+  }
+  .logo{
+    font-family:'Fraunces',serif;font-weight:600;font-size:22px;
+    letter-spacing:-0.02em;
+  }
+  .logo span{color:var(--coral);}
+  .nav-links{display:flex;gap:36px;font-size:15px;font-weight:500;}
+  .nav-links a{color:var(--stone);transition:color .2s;}
+  .nav-links a:hover{color:var(--ink);}
+  @media (max-width:800px){.nav-links{display:none;}}
+
+  /* HERO */
+  .hero-section{
+    position:relative;
+    padding:100px 0 90px;
+    overflow:hidden;
+  }
+  .hero-bg{
+    position:absolute;inset:0;
+    background-image:url('/img/background-seosysteme-com.webp');
+    background-size:cover;background-position:center;
+    z-index:0;
+  }
+  .hero-bg::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(120deg, rgba(27,36,48,0.94) 0%, rgba(27,36,48,0.88) 45%, rgba(27,36,48,0.72) 100%);
+  }
+  .hero{
+    position:relative;z-index:1;
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:center;
+  }
+  @media (max-width:900px){.hero{grid-template-columns:1fr;}}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:14px;color:#F0C9B8;font-weight:600;
+    margin-bottom:20px;
+  }
+  .eyebrow::before{
+    content:'';width:8px;height:8px;border-radius:50%;background:var(--coral);
+    display:inline-block;
+  }
+  .hero h1{
+    font-size:clamp(32px,4.6vw,52px);
+    letter-spacing:-0.01em;
+    margin-bottom:22px;
+    max-width:16ch;
+    color:#fff;
+  }
+  .hero-sub{
+    font-size:18px;color:#D6DADF;max-width:46ch;margin-bottom:32px;
+  }
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px;}
+  .btn-primary{
+    background:var(--coral);color:#fff;padding:14px 28px;border-radius:100px;
+    font-weight:600;font-size:15px;transition:background .25s, transform .25s;
+    display:inline-block;
+  }
+  .btn-primary:hover{background:var(--coral-dark);transform:translateY(-2px) scale(1.03);}
+  .btn-ghost{
+    border:1px solid rgba(255,255,255,0.5);color:#fff;padding:14px 28px;border-radius:100px;
+    font-weight:600;font-size:15px;transition:background .25s, transform .25s, border-color .25s;
+    display:inline-block;
+  }
+  .btn-ghost:hover{background:rgba(255,255,255,0.12);border-color:#fff;transform:translateY(-2px);}
+  .hero-proof{display:flex;gap:32px;flex-wrap:wrap;}
+  .proof-item{font-size:13px;color:#B9C0C8;}
+  .proof-item b{
+    display:block;font-family:'Fraunces',serif;font-size:26px;color:#fff;font-weight:500;
+  }
+
+  .hero-visual{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:20px;padding:32px;color:#fff;position:relative;overflow:hidden;
+    backdrop-filter:blur(4px);
+  }
+  .hero-visual-label{font-size:13px;color:#B9C0C8;margin-bottom:6px;}
+  .hero-visual-value{font-family:'Fraunces',serif;font-size:40px;font-weight:500;margin-bottom:4px;}
+  .hero-visual-caption{font-size:13px;color:#B9C0C8;margin-bottom:28px;}
+  svg.curve{width:100%;height:auto;display:block;}
+
+  /* LOGO MARQUE */
+  .band{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:26px 0;
+    overflow:hidden;
+  }
+  .band-title{
+    text-align:center;font-size:13px;color:var(--stone);margin-bottom:18px;
+  }
+  .marquee-mask{
+    position:relative;
+    -webkit-mask-image:linear-gradient(to right, transparent 0%, black 33%, black 67%, transparent 100%);
+    mask-image:linear-gradient(to right, transparent 0%, black 33%, black 67%, transparent 100%);
+  }
+  @media (max-width:700px){
+    .marquee-mask{
+      -webkit-mask-image:linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+      mask-image:linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    }
+  }
+  .marquee-track{
+    display:flex;width:max-content;
+    animation:scroll-left 70s linear infinite;
+  }
+  .marquee-group{
+    display:flex;gap:56px;padding-right:56px;
+  }
+  .marquee-group span{
+    font-family:'Fraunces',serif;font-size:17px;color:var(--stone);opacity:.75;white-space:nowrap;
+  }
+  @keyframes scroll-left{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .marquee-track{animation:none;}
+  }
+
+  /* SECTION générique */
+  section.wrap{padding-top:44px;padding-bottom:44px;}
+  .section-head{max-width:660px;margin-bottom:52px;}
+  .section-head h2{font-size:clamp(28px,3.4vw,38px);margin-bottom:14px;}
+  .section-head p{color:var(--stone);font-size:17px;}
+
+  /* SERVICES GRID */
+  .services{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  }
+  @media (max-width:800px){.services{grid-template-columns:1fr;}}
+  .service-card{
+    background:var(--card);padding:32px 28px;
+    transition:transform .25s ease, box-shadow .25s ease;
+    position:relative;
+  }
+  .service-card:hover{
+    transform:scale(1.03);
+    box-shadow:0 12px 30px rgba(27,36,48,0.08);
+    z-index:2;
+  }
+  .service-icon{margin-bottom:16px;}
+  .service-num{
+    font-family:'Fraunces',serif;font-size:13px;color:var(--coral);margin-bottom:6px;
+  }
+  .service-card h3{font-size:19px;margin-bottom:9px;}
+  .service-card p{color:var(--stone);font-size:14.5px;}
+
+  /* GRATUIT / PAYANT / SUR-MESURE */
+  .offers{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  }
+  @media (max-width:800px){.offers{grid-template-columns:1fr;}}
+  .offer-card{
+    border:1px solid var(--line);border-radius:16px;padding:30px 26px;background:var(--card);
+    transition:transform .25s ease, border-color .25s ease;
+  }
+  .offer-card:hover{transform:translateY(-4px);border-color:var(--teal);}
+  .offer-tag{
+    font-size:12px;font-weight:600;color:var(--teal-dark);
+    background:#E4EEEC;display:inline-block;padding:4px 12px;border-radius:100px;margin-bottom:16px;
+  }
+  .offer-card h3{font-size:19px;margin-bottom:10px;}
+  .offer-card p{color:var(--stone);font-size:14.5px;margin-bottom:18px;}
+  .offer-link{font-size:14px;font-weight:600;color:var(--coral);}
+  .offer-link:hover{color:var(--coral-dark);}
+
+  /* RESULTATS avec counters */
+  .results{background:var(--teal);border-radius:20px;padding:56px 48px;color:#fff;}
+  @media (max-width:700px){.results{padding:40px 24px;}}
+  .results-top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:44px;}
+  .results-top h2{color:#fff;font-size:clamp(26px,3vw,32px);max-width:26ch;}
+  .results-top p{color:#CFE1DF;font-size:15px;max-width:34ch;}
+  .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+  @media (max-width:700px){.results-grid{grid-template-columns:1fr;}}
+  .result-stat b{
+    display:block;font-family:'Fraunces',serif;font-size:40px;font-weight:500;color:#fff;margin-bottom:6px;
+  }
+  .result-stat span{font-size:14px;color:#CFE1DF;}
+
+  /* PROCESSUS */
+  .process{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;}
+  @media (max-width:700px){.process{grid-template-columns:1fr;}}
+  .process-step{
+    display:flex;gap:20px;padding:28px;background:var(--card);border:1px solid var(--line);border-radius:14px;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .process-step:hover{transform:scale(1.02);box-shadow:0 12px 30px rgba(27,36,48,0.08);}
+  .process-icon{flex-shrink:0;}
+  .process-step h3{font-size:17px;margin-bottom:6px;}
+  .process-step p{color:var(--stone);font-size:14.5px;}
+
+  /* A PROPOS (2 colonnes, y compris sur mobile) */
+  .about{
+    display:grid;grid-template-columns:1.3fr 0.7fr;gap:48px;align-items:center;
+  }
+  .about h2{font-size:clamp(24px,3.4vw,38px);margin-bottom:18px;}
+  .about p{color:var(--stone);font-size:16px;margin-bottom:14px;}
+  .about p:last-child{margin-bottom:0;}
+  .about-photo{
+    width:100%;aspect-ratio:3/4;object-fit:cover;
+    border-radius:16px;display:block;
+    box-shadow:0 12px 30px rgba(27,36,48,0.12);
+  }
+  @media (max-width:600px){
+    .about{gap:16px;}
+    .about h2{font-size:21px;margin-bottom:12px;}
+    .about p{font-size:13.5px;line-height:1.5;margin-bottom:10px;}
+    .about-extra{display:none;}
+    .about-photo{border-radius:12px;}
+  }
+
+  /* TEMOINS */
+  .testimonials{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;
+  }
+  .testimonial-card{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:28px 26px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;
+  }
+  .testimonial-card blockquote{
+    font-family:'Fraunces',serif;font-size:17px;font-weight:400;
+    line-height:1.5;color:var(--ink);
+  }
+  .testimonial-card figcaption{display:flex;align-items:center;gap:14px;}
+  .testimonial-photo{
+    width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;
+    border:2px solid var(--line);
+  }
+  .testimonial-name{font-size:15px;font-weight:600;color:var(--ink);display:block;}
+  .testimonial-role{font-size:13px;color:var(--stone);display:block;}
+
+  /* CONTACT */
+  .contact-block{
+    background:var(--ink);border-radius:20px;padding:64px 48px;color:var(--cream);
+    display:grid;grid-template-columns:1.2fr 1fr;gap:48px;
+  }
+  @media (max-width:800px){.contact-block{grid-template-columns:1fr;padding:40px 28px;}}
+  .contact-block h2{color:#fff;font-size:clamp(26px,3vw,34px);margin-bottom:16px;max-width:16ch;}
+  .contact-block p{color:#B9C0C8;font-size:16px;margin-bottom:28px;max-width:40ch;}
+  .contact-info{border-left:1px solid #3A4450;padding-left:36px;}
+  @media (max-width:800px){.contact-info{border-left:none;padding-left:0;border-top:1px solid #3A4450;padding-top:28px;}}
+  .contact-info h3{font-family:'Inter',sans-serif;font-size:13px;color:#8A93A0;font-weight:500;margin-bottom:8px;}
+  .contact-info p{color:#fff;font-size:15px;margin-bottom:24px;}
+
+  footer{
+    padding:36px 0;text-align:center;font-size:13px;color:var(--stone);
+    border-top:1px solid var(--line);
+  }
+
+/* bouton parlons-en avec effet éclat */
+    .pastille {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: #111;
+    }
+
+    .texte {
+      font-weight: 700;
+      background: linear-gradient(110deg, #8a8a8a 35%, #fff 50%, #8a8a8a 65%);
+      background-size: 250% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: brille 2.5s linear infinite;
+    }
+
+    @keyframes brille {
+      from { background-position: 150% 0; }
+      to   { background-position: -50% 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .texte{
+        animation:none;
+        background:none;
+        color:#fff;
+      }
+    }
+/* fin bouton parlons-en */
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">SEO<span>système</span></div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#offres">Pour qui</a>
+      <a href="#resultats">Résultats</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <span class="pastille"><span class="texte"><a href="https://forms.gle/UopGcPMMtveE8vc98" target="_blank" rel="noopener noreferrer">Parlons-en</a></span></span>
+  </div>
+</header>
+
+<div class="hero-section">
+  <div class="hero-bg"></div>
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Agence marketing digital · Dijon</div>
+      <h1>Seosystème - Marketing digital depuis 2008.</h1>
+      <p class="hero-sub">Visibilité, prospects, clients : SEO, publicité, réseaux sociaux, e-commerce, sites web. Sur Google, les réseaux sociaux, Amazon ou LinkedIn — dans le respect du RGPD.</p>
+      <div class="hero-ctas">
+        <a href="https://forms.gle/UopGcPMMtveE8vc98" target="_blank" rel="noopener noreferrer" class="btn-primary">Envoyer un message</a>
+        <a href="#offres" class="btn-ghost">Ce que Seosystème peut faire pour vous</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-item"><b data-count="4810">0</b>visites mensuelles générées pour un client sur Google</div>
+        <div class="proof-item"><b data-count="54">0</b>prospects qualifiés en un mois</div>
+        <div class="proof-item"><b>2008</b>Premier projet</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-visual-label">Trafic organique — cabinet d'avocats</div>
+      <div class="hero-visual-value">4 810</div>
+      <div class="hero-visual-caption">visites par mois, 6 mois après refonte</div>
+      <svg class="curve" viewBox="0 0 320 120" fill="none">
+        <path d="M0 100 C 40 95, 60 90, 90 78 C 130 62, 150 40, 190 28 C 230 16, 270 10, 320 4"
+              stroke="#E8724C" stroke-width="3" stroke-linecap="round"/>
+        <path d="M0 100 C 40 95, 60 90, 90 78 C 130 62, 150 40, 190 28 C 230 16, 270 10, 320 4 L320 120 L0 120 Z"
+              fill="#E8724C" opacity="0.12"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="band">
+  <div class="band-title">Ils nous font confiance</div>
+  <div class="marquee-mask">
+    <div class="marquee-track">
+      <div class="marquee-group"><span>Cabinet Lopez</span><span>Filiatio</span><span>Sekeres</span><span>VC&amp;Co</span><span>Contador MX</span><span>Elodie Facialiste</span><span>ARCAM</span></div>
+      <div class="marquee-group" aria-hidden="true"><span>Cabinet Lopez</span><span>Filiatio</span><span>Sekeres</span><span>VC&amp;Co</span><span>Contador MX</span><span>Elodie Facialiste</span><span>ARCAM</span></div>
+      <div class="marquee-group" aria-hidden="true"><span>Cabinet Lopez</span><span>Filiatio</span><span>Sekeres</span><span>VC&amp;Co</span><span>Contador MX</span><span>Elodie Facialiste</span><span>ARCAM</span></div>
+      <div class="marquee-group" aria-hidden="true"><span>Cabinet Lopez</span><span>Filiatio</span><span>Sekeres</span><span>VC&amp;Co</span><span>Contador MX</span><span>Elodie Facialiste</span><span>ARCAM</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="a-propos" class="wrap">
+  <div class="about">
+    <div>
+      <h2>Qui est derrière SEOsystème ?</h2>
+      <p>Je m'appelle Nicolas, dirigeant de SEOsystème. Depuis 2008, j'accompagne toutes sortes de projet ayant pour ambition d'être visible en ligne.</p>
+      <p class="about-extra">Via le référencement naturel ou payant, les sites web, les réseaux sociaux, je travaille tout ce qui fait venir les bons visiteurs pour les convertir en clients.</p>
+      <p class="about-extra">A bientôt j'espère !</p>
+    </div>
+    <picture>
+      <source media="(max-width:600px)" srcset="/img/nicolas-seosysteme-com-mobile.webp">
+      <img class="about-photo" src="/img/nicolas-seosysteme-com-desktop.webp" alt="Nicolas, fondateur de SEOsystème" width="" height="" loading="lazy">
+    </picture>
+  </div>
+</section>
+
+<section id="services" class="wrap">
+  <div class="section-head">
+    <h2>Ce que nous faisons</h2>
+    <p>Une seule question derrière chaque service : comment faire venir les bonnes personnes chez vous et les convaincre de passer à l'action.</p>
+  </div>
+  <div class="services">
+    <div class="service-card">
+      <svg class="service-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="17" cy="17" r="11" stroke="#2F5D5A" stroke-width="2.5"/><line x1="25.5" y1="25.5" x2="34" y2="34" stroke="#E8724C" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <div class="service-num">01</div>
+      <h3>SEO &amp; visibilité Google</h3>
+      <p>Référencement naturel, Google Maps, Google Search, IA générative : on vous fait apparaître là où vos clients cherchent.</p>
+    </div>
+    <div class="service-card">
+      <svg class="service-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="6" y="10" width="28" height="20" rx="3" stroke="#2F5D5A" stroke-width="2.5"/><path d="M6 15h28" stroke="#2F5D5A" stroke-width="2.5"/><circle cx="24" cy="23" r="3" fill="#E8724C"/></svg>
+      <div class="service-num">02</div>
+      <h3>Sites web qui convertissent</h3>
+      <p>Sites vitrine, e-commerce ou prise de rendez-vous, en WordPress ou sur-mesure, pensés pour transformer les visites en contacts.</p>
+    </div>
+    <div class="service-card">
+      <svg class="service-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M8 32V23M20 32V16M32 32V9" stroke="#2F5D5A" stroke-width="2.5" stroke-linecap="round"/><circle cx="32" cy="9" r="3" fill="#E8724C"/></svg>
+      <div class="service-num">03</div>
+      <h3>Publicité SEA &amp; réseaux</h3>
+      <p>Google Ads, Facebook, Instagram, TikTok, LinkedIn : des campagnes calibrées pour un budget qui rapporte plus qu'il ne coûte.</p>
+    </div>
+    <div class="service-card">
+      <svg class="service-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M6 20a14 14 0 1 1 28 0 14 14 0 0 1-28 0z" stroke="#2F5D5A" stroke-width="2.5"/><path d="M20 12v8l6 4" stroke="#E8724C" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <div class="service-num">04</div>
+      <h3>Automatisation &amp; suivi</h3>
+      <p>Relances automatiques, tableaux de bord, monitoring : on mesure ce qui marche pour ajuster ce qui ne marche pas.</p>
+    </div>
+    <div class="service-card">
+      <svg class="service-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 5l13 5v9c0 8-5.500 13.500-13 16-7.500-2.500-13-8-13-16v-9z" stroke="#2F5D5A" stroke-width="2.5" stroke-linejoin="round"/><path d="M14 20l4.500 4.500L26 15.500" stroke="#E8724C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="service-num">05</div>
+      <h3>Audit et conformité RGPD</h3>
+      <p>Votre site ne convertit pas assez ? On identifie ce qui bloque, dans le respect des règles de protection des données.</p>
+    </div>
+    <div class="service-card">
+      <svg class="service-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 9l16 8-16 8-16-8z" stroke="#2F5D5A" stroke-width="2.5" stroke-linejoin="round"/><path d="M10 21v7c0 3 5 5 10 5s10-2 10-5v-7" stroke="#2F5D5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 18.500V27" stroke="#E8724C" stroke-width="2.5" stroke-linecap="round"/><circle cx="34" cy="29" r="2" fill="#E8724C"/></svg>
+      <div class="service-num">06</div>
+      <h3>Formation et accompagnement</h3>
+      <p>Envie d'apprendre par vous-même ? On propose aussi des cours et de l'accompagnement, à votre rythme, à votre budget.</p>
+    </div>
+  </div>
+</section>
+
+<section id="offres" class="wrap">
+  <div class="section-head">
+    <h2>Un accompagnement pour chaque situation</h2>
+    <p>Pas de budget ? peu de budget ? ou pas le temps d'apprendre ? → il y a une porte d'entrée pour chacun.</p>
+  </div>
+  <div class="offers">
+    <div class="offer-card">
+      <div class="offer-tag">Pas de budget</div>
+      <h3>Vous démarrez de zéro</h3>
+      <p>Des ressources et des conseils pour poser les bases vous-même, sans rien dépenser.</p>
+      <a href="https://www.youtube.com/@SEOsystemeOFFICIEL" target="_blank" rel="noopener noreferrer" class="offer-link">Voir les ressources gratuites →</a>
+    </div>
+    <div class="offer-card">
+      <div class="offer-tag">Un peu de budget</div>
+      <h3>Vous voulez apprendre</h3>
+      <p>Des formations spécialisées pour aller plus loin, à votre rythme, sur les sujets qui vous concernent vraiment.</p>
+      <a href="#" class="offer-link">Voir les formations → (à venir)</a>
+    </div>
+    <div class="offer-card">
+      <div class="offer-tag">Pas le temps</div>
+      <h3>Vous voulez déléguer</h3>
+      <p>Vous avez un besoin précis et vous préférez qu'on s'en occupe. On en discute directement.</p>
+      <a href="https://forms.gle/UopGcPMMtveE8vc98" target="_blank" rel="noopener noreferrer" class="offer-link">Envoyer un message →</a>
+    </div>
+  </div>
+</section>
+
+<section id="resultats" class="wrap">
+  <div class="results">
+    <div class="results-top">
+      <h2>Les chiffres parlent plus que les promesses</h2>
+      <p>Exemple réel : refonte du site d'un cabinet d'avocats.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-stat"><b data-count="4810">0</b><span>visites par mois</span></div>
+      <div class="result-stat"><b data-count="54">0</b><span>prospects qualifiés générés en 1 mois</span></div>
+      <div class="result-stat"><b data-count="25000" data-prefix="jusqu'à ">0</b><span>euros de valeur par client selon le service</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="methode" class="wrap">
+  <div class="section-head">
+    <h2>Il y a un projet existant ?</h2>
+    <p>La méthode SEOsysteme en 2 étapes</p>
+  </div>
+  <div class="process">
+    <div class="process-step">
+      <svg class="process-icon" width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true"><circle cx="22" cy="18" r="10" stroke="#2F5D5A" stroke-width="2.5"/><line y1="-1.25" x2="12" y2="-1.25" transform="matrix(0.7071 0.7071 0.7071 -0.7071 29 25)" stroke="#E8724C" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <div>
+        <h3>Etape 1 - Audit</h3>
+        <p>On analyse votre situation actuelle pour comprendre précisément ce qui freine votre visibilité et vos conversions.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <svg class="process-icon" width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true"><path d="M10 30l8-8 6 6 12-14" stroke="#2F5D5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="36" cy="14" r="3" fill="#E8724C"/></svg>
+      <div>
+        <h3>Etape 2 - Mise en œuvre</h3>
+        <p>On améliore chaque aspect de votre projet, jusqu'à en faire une machine à générer des contacts et des ventes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="testimonials">
+    <figure class="testimonial-card">
+      <blockquote>« Nous le recommandons sans hésiter. »</blockquote>
+      <figcaption>
+        <img class="testimonial-photo" src="/img/veronica-commentaire-seosysteme-com.webp" alt="Véronica Lopez" width="56" height="56" loading="lazy">
+        <div>
+          <span class="testimonial-name">Véronica Lopez</span>
+          <span class="testimonial-role">Pédiatre</span>
+        </div>
+      </figcaption>
+    </figure>
+    <figure class="testimonial-card">
+      <blockquote>« Nous sommes très satisfaits du site web, le travail est toujours à la pointe, avec la meilleure qualité. »</blockquote>
+      <figcaption>
+        <img class="testimonial-photo" src="/img/carlos-commentaire-seosysteme-com.webp" alt="Carlos Montiel" width="56" height="56" loading="lazy">
+        <div>
+          <span class="testimonial-name">Carlos Montiel</span>
+          <span class="testimonial-role">Chirurgien</span>
+        </div>
+      </figcaption>
+    </figure>
+    <figure class="testimonial-card">
+      <blockquote>« Je suis pleinement satisfaite des services de Nicolas ! C’est une personne sérieuse, très professionnelle et particulièrement compétente. Son expertise, son engagement et son sens du travail bien fait font toute la différence. Un professionnel de confiance que je recommande les yeux fermés ! »</blockquote>
+      <figcaption>
+        <img class="testimonial-photo" src="/img/elodie-galimard-commentaire-seosysteme-com.webp" alt="Elodie Galimard" width="56" height="56" loading="lazy">
+        <div>
+          <span class="testimonial-name">Elodie Galimard</span>
+          <span class="testimonial-role">elodiefacialistedijon.com</span>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="contact" class="wrap">
+  <div class="contact-block">
+    <div>
+      <h2>Construisons votre stratégie</h2>
+      <p>En laissant vos coordonnées, vous acceptez que Seosystème vous recontacte pour convenir d'un rendez-vous</p>
+      <a href="https://forms.gle/UopGcPMMtveE8vc98" target="_blank" rel="noopener noreferrer" class="btn-primary">Envoyer un message</a>
+    </div>
+    <div class="contact-info">
+      <h3>Adresse</h3>
+      <p>SEOsystème<br>21000 Dijon, France</p>
+      <h3>Contact</h3>
+      <p>Nicolas</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© <span id="currentYear">2026</span> SEOsystème — Dijon, France</span>
+</footer>
+
+<script>
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+  function animateCount(el){
+    const target = parseInt(el.getAttribute('data-count'), 10);
+    const prefix = el.getAttribute('data-prefix') || '';
+    const duration = 1000;
+    const start = performance.now();
+    function tick(now){
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = Math.round(target * eased);
+      el.textContent = prefix + value.toLocaleString('fr-FR');
+      if(progress < 1){ requestAnimationFrame(tick); }
+    }
+    requestAnimationFrame(tick);
+  }
+  const counters = document.querySelectorAll('[data-count]');
+  const seen = new WeakSet();
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting && !seen.has(entry.target)){
+        seen.add(entry.target);
+        animateCount(entry.target);
+      }
+    });
+  }, {threshold:0.4});
+  counters.forEach(c=>io.observe(c));
+</script>
+
+</body>
+</html>
